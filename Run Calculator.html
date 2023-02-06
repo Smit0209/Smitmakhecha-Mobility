@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Calculator</title>
+  </head>
+  <body>
+    <h1>Your Score is </h1>
+    <p id="display"></p>
+    <p id="output"></p>
+    <p id="run"></p>
+
+    <script type="text/javascript">
+      let size = 6;
+      let out = [];
+      let sum = 0;
+      let inp = prompt("Enter array: ");
+      let arr = inp.split(",");
+      for (let i = 0; i < size; i++) {
+        if (i <= size - 2) {
+          out[i] = arr[i] * i;
+        } else {
+          out[i] = arr[i] * (i + 1);
+        }
+        sum += out[i];
+      }
+      document.getElementById("display").innerHTML = "input array : " + arr;
+      document.getElementById("output").innerHTML = "output array : " + out;
+      document.getElementById("run").innerHTML = "Total runs : " + sum;
+    </script>
+  </body>
+</html>
