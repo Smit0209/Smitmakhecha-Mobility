@@ -91,9 +91,10 @@
                    return
     
                  }
+                 
             let wicket1=score1.value.split("/")[1];
             let wicket2=score2.value.split("/")[1];
-
+            let w = 10 -parseInt(wicket2)
              if (parseInt(wicket1)>10 || parseInt(wicket2)>10 )
                  {
                     alert("Wickets can't be greater than 10");
@@ -102,8 +103,7 @@
               
             let run1=score1.value.split("/")[0];
             let run2=score2.value.split("/")[0];
-
-              
+            let c= parseInt(run1)-parseInt(run2)
                 
               if (parseInt(run1)== parseInt(run2))
                  {
@@ -112,11 +112,11 @@
                  } 
             else if (parseInt(run1) > parseInt(run2))
                  {
-                    alert("Team 1 Won the Match");
+                    alert("Team 1 Won the Match by " +c+ " Runs.");
                  }
             else 
                {
-                alert("Team 2 won the Match")
+                alert("Team 2 won the Match by " +w+ " Wickets")
                }
 
         }
