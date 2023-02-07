@@ -94,15 +94,18 @@
             let wicket1=score1.value.split("/")[1];
             let wicket2=score2.value.split("/")[1];
 
-             if (parseInt(wicket1)>10 || parseInt(wicket2)>10)
+             if (parseInt(wicket1)>10 || parseInt(wicket2)>10 )
                  {
                     alert("Wickets can't be greater than 10");
                     return
-                 }            
+                 } 
+              
             let run1=score1.value.split("/")[0];
             let run2=score2.value.split("/")[0];
+
+              
                 
-            if (parseInt(run1)== parseInt(run2))
+              if (parseInt(run1)== parseInt(run2))
                  {
                     alert("Match is Tie");
                 
